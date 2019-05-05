@@ -1,0 +1,54 @@
+body{
+background: #FEAC5E;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+  
+.thumbnail img{
+    width: 100%;
+}
+
+.tumbnail .caption{
+    padding: 9px;
+}
+
+.tittle{
+    border: 3px solid #87CEEB;
+    margin-top: 15px;
+    padding: 4px;
+}
+
+#box-comments{
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+#comments{
+    margin-top: 15px;
+    padding: 5px;
+    border-top: 1px dotted #87CEEB;
+    border-bottom: 1px dotted #87CEEB;
+    border-radius: 5px;
+}
+
+.delete-form{
+    margin-left: 10px;
+}
+
+.jumbotron{
+    font-family: 'ZCOOL XiaoWei', serif;
+    color: white;
+    background-color: rgba( 0, 0, 0, 0.6);
+}
+
+.games{
+    color: white;
+    border: 1px solid rgba( 255, 165, 0, 0.6);
+    background-color: rgba(80 ,220, 100, 0.6);
+    border-radius: 15px;
+    font-family: 'ZCOOL XiaoWei', serif;
+    padding: 3px;
+    padding-right: 6px;
+    padding-left: 6px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Argonauts</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/main.css">
+        <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    </head>
+    <body>
+    <nav class="navbar navbar-dark bg-dark" style=" margin-bottom: 15px; border: 1px solid black;">
+        <div class="container-fluid">
+            <div class="header">
+                <a class="navbar-brand" href="/"><i class="fas fa-user-astronaut" style="margin-right: 10px;"></i><strong>Argonauts</strong></a>
+            </div>
+            <ul class="nav justify-content-end">
+                <%if(!currentUser){%>
+                    <li class="nav-item">
+                        <a class="nav-link rounded" style="color: #87CEEB; border: 1px solid #87CEEB;" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded" style="color: #87CEEB; border: 1px solid #87CEEB; margin-right: 8px; margin-left: 8px" href="/register">Sign Up</a>
+                    </li>
+                <% }else{ %>
+                    <li class="nav-item" style="margin-right: 10px;">
+                        <a class="nav-link rounded" href="/campgrounds" style="color: #87CEEB;">Sign In As  <span style="color: white; border-bottom: 1px solid white"> <%= currentUser.username %></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded" style="color: #87CEEB; border: 1px solid #87CEEB;" href="/logout">Logout</a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <% if(error && error.length > 0) { %>
+            <div class="alert alert-danger" role="alert" style="margin-x: 20px"><%= error %></div>
+        <% } %>
+        <% if(success && success.length > 0) { %>
+            <div class="alert alert-success" role="alert" style="margin-x: 20px"><%= success %></div>
+        <% } %>
+    </div>

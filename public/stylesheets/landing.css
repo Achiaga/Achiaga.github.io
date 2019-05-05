@@ -1,0 +1,112 @@
+body {
+  background-color: #000;
+}
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+ 
+}
+
+
+#intro2 {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 50px;
+  color: #fff;
+  font-size: large;
+}
+
+#intro{
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-family: 'Sniglet', cursive;
+  font-size: 1.5em;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2px;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 50px;
+}
+
+.boton{
+  color: white;
+  background-color: rgba(255, 10, 10, 1);
+  font-family: 'Sniglet', cursive;
+}
+
+
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 35s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FZvZkiScUA8s%2Fmaxresdefault.jpg&f=1) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://i.pinimg.com/originals/e2/98/24/e298247c9b4ffdca2466cf66ab649aca.jpg);
+  animation-delay: 7s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://www.i-marcus.com/files/2019/01/star-wars-battlefront-2-uhd-4k-wallpaper.jpg);
+  animation-delay: 14s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://i.pinimg.com/originals/ab/8d/48/ab8d480d3bb83a0965779f2e9ae958ba.jpg);
+  animation-delay: 21s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(http://www.1zoom.net/big2/738/258936-blackangel.jpg);
+  animation-delay: 28s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
